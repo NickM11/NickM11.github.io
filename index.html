@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nick — Systems &amp; Game Development Portfolio</title>
+<meta name="description" content="Portfolio of Nick — systems programming, game development (Unreal Engine 5), and algorithmic research.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="scanline" aria-hidden="true"></div>
+
+<header class="topbar">
+  <div class="wrap topbar__inner">
+    <span class="brand">nick<span class="brand__cursor">_</span></span>
+    <nav class="tabs" aria-label="Primary">
+      <button class="tab is-active" data-target="home">~/home</button>
+      <button class="tab" data-target="projects">~/projects</button>
+      <button class="tab" data-target="about">~/about</button>
+      <button class="tab" data-target="contact">~/contact</button>
+    </nav>
+    <button class="navtoggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+
+  <!-- HOME -->
+  <section id="home" class="section section--hero">
+    <div class="wrap">
+      <div class="terminal" role="img" aria-label="Terminal boot sequence">
+        <div class="terminal__bar">
+          <span class="dot dot--r"></span><span class="dot dot--y"></span><span class="dot dot--g"></span>
+          <span class="terminal__title">nick@portfolio: ~</span>
+        </div>
+        <div class="terminal__body">
+          <p class="line"><span class="prompt">$</span> whoami</p>
+          <p class="line line--out">nick — systems programmer &amp; game developer</p>
+          <p class="line"><span class="prompt">$</span> cat focus.txt</p>
+          <p class="line line--out">C++ · Unreal Engine 5 · algorithms &amp; data structures · applied research</p>
+          <p class="line"><span class="prompt">$</span> location --show</p>
+          <p class="line line--out">Harlow, Essex, UK</p>
+          <p class="line line--live"><span class="prompt">$</span> <span class="caret" aria-hidden="true"></span></p>
+        </div>
+      </div>
+
+      <h1 class="hero__title">Building things at the systems level.</h1>
+      <p class="hero__sub">BSc Computer Science graduate (Slovak University of Technology, Bratislava) working across multiplayer game architecture, constrained-channel coding theory, and hand-built algorithms — from replication bugs to finite-state machines.</p>
+
+      <div class="hero__cta">
+        <button class="btn btn--primary" data-goto="projects">View projects</button>
+        <button class="btn btn--ghost" data-goto="contact">Get in touch</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="section">
+    <div class="wrap">
+      <p class="eyebrow">// project trace</p>
+      <h2 class="section__title">Projects</h2>
+
+      <div class="trace" role="list">
+
+        <article class="node" role="listitem">
+          <div class="node__marker" aria-hidden="true"></div>
+          <div class="node__card">
+            <p class="node__kicker">Unreal Engine 5 · C++ / Blueprint</p>
+            <h3 class="node__title">CosmicRaidProject</h3>
+            <p class="node__desc">A multiplayer FPS/TPS built with a C++ and Blueprint hybrid workflow. Includes a full weapon system (<code>UWeaponComponentMaster</code>, <code>UWeaponSystemComponent</code>, pickup and interact interfaces), replicated across the network with RPCs, <code>DOREPLIFETIME</code>, and RepNotify.</p>
+            <ul class="node__facts">
+              <li>NPC AI via EQS, Behavior Trees &amp; Blackboards</li>
+              <li>Line-trace shooting with the Enhanced Input System</li>
+              <li>Git LFS repo management at ~15.7 GiB scale</li>
+            </ul>
+            <a class="node__link" href="#" data-placeholder="github">View repository →</a>
+          </div>
+        </article>
+
+        <article class="node" role="listitem">
+          <div class="node__marker" aria-hidden="true"></div>
+          <div class="node__card">
+            <p class="node__kicker">C++ · Coding theory · Bachelor's thesis</p>
+            <h3 class="node__title">TC_Toolset — Translation Codes</h3>
+            <p class="node__desc">A modular C++ library implementing the Freiman–Wyner prefix-suffix construction for constrained channels — six modules covering states, FSM, capacity, generation, codebooks, and I/O. Backed by 852 batch experimental runs across parameters d, n, k, r.</p>
+            <ul class="node__facts">
+              <li>Key result: rate efficiency η = 99.75% at n=18, k=17, r=4</li>
+              <li>Division factor d shown to have no measurable effect on efficiency</li>
+              <li>Defended with a 12-slide presentation and full speaker notes</li>
+            </ul>
+            <a class="node__link" href="#" data-placeholder="github">View repository →</a>
+          </div>
+        </article>
+
+        <article class="node" role="listitem">
+          <div class="node__marker" aria-hidden="true"></div>
+          <div class="node__card">
+            <p class="node__kicker">Python &amp; C++ · Ongoing study</p>
+            <h3 class="node__title">Algorithms &amp; Data Structures</h3>
+            <p class="node__desc">Hands-on implementation of core algorithms in both Python and C++, working through sorting and beyond — including a self-written quicksort using Lomuto partitioning, taken through a detailed code review.</p>
+            <ul class="node__facts">
+              <li>Focus on correctness first, then complexity trade-offs</li>
+              <li>Dual-language implementation for comparison</li>
+            </ul>
+            <a class="node__link" href="#" data-placeholder="github">View repository →</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section">
+    <div class="wrap wrap--narrow">
+      <p class="eyebrow">// about</p>
+      <h2 class="section__title">About</h2>
+      <p class="about__text">I'm Nick, a Computer Science graduate based in Harlow, Essex, working across systems-level and applied CS — game development, algorithmic tooling, and applied research. I completed my BSc in Computer Science at the Slovak University of Technology in Bratislava, Faculty of Electrical Engineering and Information Technology, with a thesis on constrained-channel coding theory.</p>
+      <p class="about__text">I like problems where correctness and performance both matter: replication bugs in a live multiplayer build, or squeezing rate efficiency out of a constrained channel. Outside of core project work, I spend time studying algorithms and data structures from first principles in both Python and C++.</p>
+
+      <div class="skillgrid">
+        <div class="skillgrid__group">
+          <h3>Languages</h3>
+          <p>C++ · Python · Blueprint (UE5)</p>
+        </div>
+        <div class="skillgrid__group">
+          <h3>Systems &amp; tools</h3>
+          <p>Unreal Engine 5 · Git / Git LFS · Visual Studio</p>
+        </div>
+        <div class="skillgrid__group">
+          <h3>Focus areas</h3>
+          <p>Game networking &amp; replication · algorithms &amp; data structures · applied research</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section section--contact">
+    <div class="wrap wrap--narrow">
+      <p class="eyebrow">// contact</p>
+      <h2 class="section__title">Get in touch</h2>
+      <p class="about__text">Open to IT support, data-focused, and technical roles in the Harlow/Essex area — and always happy to talk through a project.</p>
+
+      <ul class="contactlist">
+        <li><span class="contactlist__label">Email</span><a href="mailto:your.email@example.com" data-placeholder="email">your.email@example.com</a></li>
+        <li><span class="contactlist__label">GitHub</span><a href="#" data-placeholder="github">github.com/yourusername</a></li>
+        <li><span class="contactlist__label">LinkedIn</span><a href="#" data-placeholder="linkedin">linkedin.com/in/yourusername</a></li>
+      </ul>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <p>Built by hand, hosted on GitHub Pages.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
