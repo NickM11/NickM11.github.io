@@ -51,4 +51,38 @@
       }
     });
   });
+  const modal = document.getElementById('pdfmodal');
+const frame = document.getElementById('pdfmodal-frame');
+const titleEl = document.getElementById('pdfmodal-title');
+const downloadLink = document.getElementById('pdfmodal-download');
+let lastFocused = null;
+
+function openModal(url, title) {
+  lastFocused = document.activeElement;
+  frame.src = url;
+  downloadLink.href = url;
+  titleEl.textContent = title || 'Document preview';
+  modal.hidden = false;
+  document.body.style.overflow = 'hidden';
+  modal.querySelector('.pdfmodal__close').focus();
+}
+
+function closeModal() {
+  modal.hidden = true;
+  frame.src = '';
+  document.body.style.overflow = '';
+  if (lastFocused) lastFocused.focus();
+}
+
+document.querySelectorAll('[data-preview]').forEach(btn => {
+  btn.addEventListener('click', () => openModal(btn.dataset.preview, btn.dataset.title));
+});
+
+modal.querySelectorAll('[data-close-modal]').forEach(el => {
+  el.addEventListener('click', closeModal);
+});
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && !modal.hidden) closeModal();
+});
 })();

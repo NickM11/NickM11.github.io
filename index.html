@@ -20,6 +20,7 @@
     <nav class="tabs" aria-label="Primary">
       <button class="tab is-active" data-target="home">~/home</button>
       <button class="tab" data-target="projects">~/projects</button>
+      <button class="tab" data-target="publications">~/publications</button>
       <button class="tab" data-target="about">~/about</button>
       <button class="tab" data-target="contact">~/contact</button>
     </nav>
@@ -43,7 +44,7 @@
           <p class="line"><span class="prompt">$</span> whoami</p>
           <p class="line line--out">nick — systems programmer &amp; game developer</p>
           <p class="line"><span class="prompt">$</span> cat focus.txt</p>
-          <p class="line line--out">C++ · Unreal Engine 5 · algorithms &amp; data structures · applied research</p>
+          <p class="line line--out">C++ · Unreal Engine 5 · algorithms &amp; data structures · applied research · graphics programming</p>
           <p class="line"><span class="prompt">$</span> location --show</p>
           <p class="line line--out">Harlow, Essex, UK</p>
           <p class="line line--live"><span class="prompt">$</span> <span class="caret" aria-hidden="true"></span></p>
@@ -116,13 +117,64 @@
     </div>
   </section>
 
+  <!-- PUBLICATIONS -->
+  <section id="publications" class="section">
+    <div class="wrap">
+      <p class="eyebrow">// publications</p>
+      <h2 class="section__title">Publications &amp; Research</h2>
+
+      <div class="papers">
+
+        <article class="paper">
+          <div class="paper__head">
+            <h3 class="paper__title">Translation Codes: A Freiman–Wyner Prefix-Suffix Construction for Constrained Channels</h3>
+            <span class="paper__tag">Bachelor's Thesis · 2026</span>
+          </div>
+          <p class="paper__meta">Slovak University of Technology in Bratislava — Faculty of Electrical Engineering and Information Technology</p>
+          <p class="paper__desc">Developed and evaluated a modular C++ toolset implementing the Freiman–Wyner prefix-suffix construction for constrained-channel coding. Ran 852 batch experiments sweeping parameters d, n, k, and r, finding a peak rate efficiency of η = 99.75% at n=18, k=17, r=4, and showing the division factor d has no measurable effect on rate efficiency.</p>
+          <div class="paper__links">
+          <button class="paper__btn" data-preview="papers/Translation_codes_constructions_supported_by_computer.pdf" data-title="Translation Codes: A Freiman–Wyner Prefix-Suffix Construction for Constrained Channels">Preview</button>
+          <a class="paper__btn" href="papers/Translation_codes_constructions_supported_by_computer.pdf" download>Download PDF</a>
+          <a class="paper__btn paper__btn--ghost" href="#" data-placeholder="github">TC_Toolset repository →</a>
+        </div>
+
+        </article>
+
+        <article class="paper">
+          <div class="paper__head">
+            <h3 class="paper__title">Translation Codes:First Steps in Adapting the technique</h3>
+            <span class="paper__tag">Magazine Paper · 2025</span>
+          </div>
+          <p class="paper__meta">Slovak University of Technology in Bratislava — Faculty of Electrical Engineering and Information Technology</p>
+          <p class="paper__desc">Evaluated and test different approaches for Freiman–Wyner technique.Early work on my thesis.</p>
+          <div class="paper__links">
+          <button class="paper__btn" data-preview="papers/SVOC_2025.pdf" data-title="Translation Codes:First Steps in Adapting the technique">Preview</button>
+          <a class="paper__btn" href="papers/SVOC_2025.pdf" download>Download PDF</a>
+          <a class="paper__btn paper__btn--ghost" href="#" data-placeholder="github">TC_Toolset repository →</a>
+        </div>
+
+        </article>
+
+        <article class="paper paper--placeholder">
+          <div class="paper__head">
+            <h3 class="paper__title">Future Work</h3>
+            <span class="paper__tag">Year TBD</span>
+          </div>
+          <p class="paper__desc">This is placeholder for future publications.Thank you for your attention <3.</p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
   <!-- ABOUT -->
   <section id="about" class="section">
     <div class="wrap wrap--narrow">
       <p class="eyebrow">// about</p>
       <h2 class="section__title">About</h2>
       <p class="about__text">I'm Nick, a Computer Science graduate based in Harlow, Essex, working across systems-level and applied CS — game development, algorithmic tooling, and applied research. I completed my BSc in Computer Science at the Slovak University of Technology in Bratislava, Faculty of Electrical Engineering and Information Technology, with a thesis on constrained-channel coding theory.</p>
-      <p class="about__text">I like problems where correctness and performance both matter: replication bugs in a live multiplayer build, or squeezing rate efficiency out of a constrained channel. Outside of core project work, I spend time studying algorithms and data structures from first principles in both Python and C++.</p>
+      <p class="about__text">I like problems where correctness and performance both matter: replication bugs in a live multiplayer build, or squeezing rate efficiency out of a constrained channel. 
+        Outside of core project work, I spend time studying algorithms and data structures from first principles in both Python and C++,as well graphics programming.</p>
 
       <div class="skillgrid">
         <div class="skillgrid__group">
@@ -149,8 +201,8 @@
       <p class="about__text">Open to IT support, data-focused, and technical roles in the Harlow/Essex area — and always happy to talk through a project.</p>
 
       <ul class="contactlist">
-        <li><span class="contactlist__label">Email</span><a href="mailto:your.email@example.com" data-placeholder="email">your.email@example.com</a></li>
-        <li><span class="contactlist__label">GitHub</span><a href="#" data-placeholder="github">github.com/yourusername</a></li>
+        <li><span class="contactlist__label">Email</span><a href="mailto:your.email@example.com" data-placeholder="email">nicolaimelnic07@gmail.com</a></li>
+        <li><span class="contactlist__label">GitHub</span><a href="#" data-placeholder="github">https://github.com/NickM11</a></li>
         <li><span class="contactlist__label">LinkedIn</span><a href="#" data-placeholder="linkedin">linkedin.com/in/yourusername</a></li>
       </ul>
     </div>
@@ -163,6 +215,20 @@
     <p>Built by hand, hosted on GitHub Pages.</p>
   </div>
 </footer>
+
+<div class="pdfmodal" id="pdfmodal" hidden>
+  <div class="pdfmodal__backdrop" data-close-modal></div>
+  <div class="pdfmodal__panel" role="dialog" aria-modal="true" aria-labelledby="pdfmodal-title">
+    <div class="pdfmodal__bar">
+      <span id="pdfmodal-title" class="pdfmodal__title">Document preview</span>
+      <div class="pdfmodal__actions">
+        <a id="pdfmodal-download" class="paper__btn" download>Download</a>
+        <button class="pdfmodal__close" data-close-modal aria-label="Close preview">✕</button>
+      </div>
+    </div>
+    <iframe id="pdfmodal-frame" class="pdfmodal__frame" title="PDF preview"></iframe>
+  </div>
+</div>
 
 <script src="script.js"></script>
 </body>
